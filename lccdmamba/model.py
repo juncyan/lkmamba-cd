@@ -21,7 +21,6 @@ class LCCDMamba(nn.Module):
     def __init__(self):
         super().__init__()
         self.encoder = Backbone_VSSM(out_indices=(0, 1, 2, 3))
-       
         self.decoder = Decoder(
             dims=self.encoder.dims,
             out_channels=64,
