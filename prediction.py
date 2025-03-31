@@ -12,9 +12,7 @@ from changedetection.configs.config import get_config
 from common.cdloader import TestReader
 from work.predict import predict
 
-from models.model2 import ChangeResSR, ChangeVitSR, ChangeSR, ChangeSR_noMCF, ChangeSR_Trans
-from models.model import ChangeACFM, ChangeMM
-from lccdmamba.model import LCCDMamba
+from lccdmamba.model import LKMamba_CD
 
 
 parser = argparse.ArgumentParser(description="Training on SYSU/LEVIR-CD+/WHU-CD dataset")
@@ -64,7 +62,7 @@ config = get_config(mparas)
 #             gmlp=config.MODEL.VSSM.GMLP,
 #             use_checkpoint=config.TRAIN.USE_CHECKPOINT,
 #             ) 
-model = LCCDMamba()
+model = LKMamba_CD()
 
 
 dataset_name = "GVLM_CD"
