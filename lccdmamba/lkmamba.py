@@ -3,8 +3,8 @@ import torch.nn as nn
 from typing import Optional, Callable, Any
 import torch.utils.checkpoint as checkpoint
 
-from cd_models.unireplknet import get_conv2d, get_bn, fuse_bn, merge_dilated_into_large_kernel, NCHWtoNHWC,NHWCtoNCHW, GRNwithNHWC
-from cd_models.vmamba import *
+from .unireplknet import get_conv2d, get_bn, fuse_bn, merge_dilated_into_large_kernel, NCHWtoNHWC,NHWCtoNCHW, GRNwithNHWC
+from .vmamba import *
 
 
 class LKSSMBlock(nn.Module):
