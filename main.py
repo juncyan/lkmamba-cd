@@ -17,8 +17,7 @@ from work.predict import predict
 # from changedetection.models.MambaBCD import STMambaBCD
 # from models.model import ChangeACFM, ChangeMM,ChangeResMM
 # from models.model2 import ChangeResSR, ChangeVitSR, ChangeSR, ChangeSR_noMCF
-from lccdmamba.model import LCCDMamba, LCCDMamba_noDTMS, LCCDMamba_RM, LCCDMamba_MISFPara, LCCDMamba_Lite, LCCDMamba_Lite2
-from rsmamba import RSMamba_CD
+from lccdmamba.model import LKMamba_CD
 from common.ready import Args
 
 
@@ -54,7 +53,7 @@ mparas = parser.parse_args()
 
 # config = get_config(mparas)
 
-model = RSMamba_CD()
+model = LKMamba_CD()
 
 
 model_name = model.__str__().split("(")[0]
